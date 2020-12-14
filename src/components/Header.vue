@@ -9,7 +9,7 @@
               <v-dialog v-model="dialog" max-width="600px">
                 <template v-slot:activator="{ on, attrs }">
                   <v-btn block v-bind="attrs" v-on="on">Новый риэлтор</v-btn>
-                  <v-btn block v-on:click="visible=!visible; drawer=!drawer">Список риэлторов</v-btn>
+                  <v-btn block v-on:click="main=!main">Список риэлторов</v-btn>
                 </template>
               </v-dialog>
             </v-list-item-title>
@@ -41,9 +41,9 @@
         </v-text-field>
       </v-row>
     </v-app-bar>
-    <div>
-      <MainForm v-if="main"/>
-    </div>
+
+    <MainForm v-if="main"/>
+
   </div>
 </template>
 
